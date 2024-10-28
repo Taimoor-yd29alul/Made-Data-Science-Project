@@ -24,7 +24,6 @@ pipeline AirportsPipeline {
       block NameHeaderWriter oftype CellWriter {
             at: cell A1;
 
-
             write: [
                   "Lfd. Nummer"
             ];
