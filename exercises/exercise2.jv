@@ -36,7 +36,8 @@ pipeline TreesPipeline {
                   'stadtteil' oftype stadtteil,
                   'standort' oftype text,
                   'baumart_botanisch' oftype text,
-                  'id' oftype id
+                  'id' oftype id,
+                  'baumfamilie' oftype text
             ];
       }
 
