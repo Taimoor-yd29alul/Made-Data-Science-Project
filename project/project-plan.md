@@ -42,11 +42,7 @@ This project analyzes the relationship between hurricane landfalls and housing m
 
 6. **Report Writing**  
    Document the entire process and findings in a detailed report. Reflect on limitations and suggest further research directions.
-
-## Deliverables
-- **Automated Data Pipeline**: Python-based ETL process to clean and merge data.  
-- **SQLite Database**: Cleaned and merged dataset stored for further analysis.  
-- **Data Report**: A PDF summarizing research outcomes, challenges, and insights.  
+  
 
 
 
