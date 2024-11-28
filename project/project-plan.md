@@ -1,33 +1,48 @@
 # Project Plan
 
 ## Title
-The Americas.
+The Impact of Hurricanes on U.S. Housing Markets
 
 ## Main Question
-
-How do enrollment and graduation rates vary across countries in The Americas, and what is their influence on labor market outcomes?
+How do hurricanes impact housing market dynamics in affected U.S. cities, particularly regarding median sale prices and housing inventory?
 
 ## Description
+This project analyzes the relationship between hurricane landfalls and housing market changes in U.S. cities. By merging detailed data on hurricanes with housing market metrics, the aim is to identify trends and assess how natural disasters influence real estate. The project involves building an automated ETL pipeline, conducting data analysis, and producing visualizations to support conclusions.
 
-This project examines how enrollment and graduation rates vary across countries in The Americas and their impact on labor market outcomes. Using open data from sources like the OECD and IPUMS Higher Education, it analyzes education metrics such as graduation rates, employment, and wages. A data pipeline, built with tools like Jayvee and Python, will integrate and analyze these datasets to identify trends and disparities. The goal is to uncover how education influences labor market performance and inform policies aimed at reducing inequalities.
+## Data Sources
 
-## Datasources
+### Datasource #1: U.S. Hurricanes and Landfalls 1851-2023
+- **Metadata URL**: [Kaggle - U.S. Hurricanes Dataset](https://www.kaggle.com/datasets/sandraroko/u-s-hurricanes-and-landfalls-1851-2023)
+- **Data Type**: CSV
+- **License**: CC0: Public Domain
+- **Description**: This dataset provides records of hurricanes, including names, dates, locations, and intensities. It enables the identification of hurricanes affecting specific regions and their characteristics.
 
-### Datasource1:
-* Data URL: https://highered.ipums.org/highered-action/variables/group?id=demog
-* Data type: CSV
+### Datasource #2: U.S. Cities Housing Market Data
+- **Metadata URL**: [Kaggle - U.S. Housing Market Data](https://www.kaggle.com/datasets/vincentvaseghi/us-cities-housing-market-data)
+- **Data Type**: CSV
+- **License**: CC0: Public Domain
+- **Description**: This dataset offers monthly statistics for housing markets, such as median sale prices, housing inventory, and days on the market. It helps evaluate changes in the housing market pre- and post-hurricane events.
 
-  ### Datasource2:
-  * Data URL: https://db.nomics.world/OECD/DSD_EO@DF_EO?dimensions=%7B%22REF_AREA%22%3A%5B%22USA%22%5D%2C%22FREQ%22%3A%5B%22A%22%5D%7D&tab=table
-  * Data type: CSV
- 
 ## Work Packages
 
-1. Example Issue [#1][i1]
-2. ...
+1. **Data Collection and Understanding**  
+   Gather and validate datasets for quality and relevance to the research question.
 
-[i1]: https://github.com/jvalue/made-template/issues/1
+2. **ETL Pipeline Development**  
+   Develop an automated ETL pipeline to extract, clean, and store the data. Address missing values, normalize formats, and filter unnecessary columns.
 
-    
+3. **Data Merging and Transformation**  
+   Merge datasets based on location and time, ensuring consistency and quality. Handle multi-value fields (e.g., "State Affected") by creating multiple rows or using other strategies.
+
+4. **Exploratory Data Analysis (EDA)**  
+   Analyze trends and patterns in the data to understand hurricane impacts. Visualize key metrics like sale price changes and inventory levels.
+
+5. **Final Analysis and Visualization**  
+   Conduct deeper statistical analysis and create visualizations that communicate findings effectively.
+
+6. **Report Writing**  
+   Document the entire process and findings in a detailed report. Reflect on limitations and suggest further research directions.
+  
+
 
 
