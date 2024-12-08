@@ -28,7 +28,12 @@ jobs:
         with:
           python-version: 3.11
 
-      #Run Automated Tests
-      - name: Project Automated Testing
+      #Make file Executable
+      - name: File Executable
         id: pr_feedback
         run: chmod +x ./testing/project/tests.sh
+
+      #Run Automated Tests
+      - name: Project Automated Testing
+        id: pr_feedback1
+        run: ./testing/project/tests.sh
