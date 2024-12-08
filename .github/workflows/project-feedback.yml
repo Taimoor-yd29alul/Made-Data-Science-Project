@@ -25,4 +25,4 @@ jobs:
       #Run Automated Tests
       - name: Project Automated Testing
         id: pr_feedback
-        run: ./project/test.sh
+        run: ./project/tests.sh
