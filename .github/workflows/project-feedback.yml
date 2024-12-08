@@ -16,12 +16,6 @@ jobs:
         with:
           path: main
 
-      - name: Checkout Automatic Testing
-        uses: actions/checkout@v4
-        with:
-          repository: Taimoor-yd29alul/Made-Data-Science-Project
-          path: testing
-
       # Install python
       - name: Set up Python 3.11
         uses: actions/setup-python@v5
