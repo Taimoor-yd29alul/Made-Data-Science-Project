@@ -31,4 +31,4 @@ jobs:
       #Run Automated Tests
       - name: Project Automated Testing
         id: pr_feedback
-        run: ./testing/project/tests.sh
+        run: chmod +x ./testing/project/tests.sh
