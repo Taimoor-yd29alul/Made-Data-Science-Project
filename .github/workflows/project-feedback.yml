@@ -1,1 +1,28 @@
+name: Project Feedback
 
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - project/**
+
+jobs:
+  Project-feedback:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          path: main
+
+      # Install python
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: 3.11
+
+      #Run Automated Tests
+      - name: Project Automated Testing
+        id: pr_feedback
+        run: ./project/test.sh
