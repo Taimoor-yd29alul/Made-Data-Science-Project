@@ -13,8 +13,6 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-        with:
-          path: main
 
       # Install python
       - name: Set up Python 3.11
@@ -23,14 +21,14 @@ jobs:
           python-version: 3.11
 
       - name: test
-        run: ls ./main/
+        run: ls
 
       #Make file Executable
       - name: File Executable
         id: pr_feedback
-        run: chmod +x ./main/project/tests.sh
+        run: chmod +x ./project/tests.sh
 
       #Run Automated Tests
       - name: Project Automated Testing
         id: pr_feedback1
-        run: ./main/project/tests.sh
+        run: ./project/tests.sh
