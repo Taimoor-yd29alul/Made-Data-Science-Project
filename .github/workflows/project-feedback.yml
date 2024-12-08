@@ -22,6 +22,9 @@ jobs:
         with:
           python-version: 3.11
 
+      - name: test
+        run: ls
+
       #Make file Executable
       - name: File Executable
         id: pr_feedback
