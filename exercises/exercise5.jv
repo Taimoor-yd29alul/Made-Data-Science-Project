@@ -46,7 +46,7 @@ pipeline GTFS {
             header: true;
             columns: [
                   'stop_id' oftype integer,
-                  'stop_name' oftype Umlauts_Text,
+                  'stop_name' oftype text,
                   'stop_lat' oftype GeoType,
                   'stop_lon' oftype GeoType,
                   'zone_id' oftype Filter_Zone
@@ -84,7 +84,12 @@ pipeline GTFS {
 
 
 
-      constraint filterdata on integer: value>=1925 and value<=1925;
+      constraint filterdata oftype RangeConstraint{
+            lowerBound:1925;
+            lowerBoundInclusive:true;
+            upperBound:1925;
+            upperBoundInclusive:true;
+      }
       constraint geocoordinate oftype RangeConstraint {
             lowerBound: -90;
             lowerBoundInclusive: true;
