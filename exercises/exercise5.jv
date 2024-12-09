@@ -46,7 +46,7 @@ pipeline GTFS {
             header: true;
             columns: [
                   'stop_id' oftype integer,
-                  'stop_name' oftype Umlauts_Text,
+                  'stop_name' oftype text,
                   'stop_lat' oftype GeoType,
                   'stop_lon' oftype GeoType,
                   'zone_id' oftype Filter_Zone
@@ -74,11 +74,6 @@ pipeline GTFS {
             ];
       }
 
-      valuetype Umlauts_Text oftype text {
-            constraints: [
-                  umlauts
-            ];
-      }
 
 
 
@@ -95,9 +90,5 @@ pipeline GTFS {
             lowerBoundInclusive: true;
             upperBound: 90;
             upperBoundInclusive: true;
-      }
-
-      constraint umlauts oftype RegexConstraint {
-            regex: /[äöüÄÖÜß]/;
       }
 }
