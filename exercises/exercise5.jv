@@ -1,0 +1,98 @@
+pipeline GTFS {
+
+
+      GTFS_extractor
+            ->GTFS_ZipInterpreter
+            ->Stops_FilePicker
+            ->Stops_TextFileInterpreter
+            ->Stops_CsvInterpreter
+            ->Stops_DataRange
+            ->Stops_ColumnDeleter
+            ->Stops_TableInterpreter
+            ->Stops_Loader;
+
+
+
+      block GTFS_extractor oftype HttpExtractor {
+            url: "https://gtfs.rhoenenergie-bus.de/GTFS.zip";
+      }
+
+      block GTFS_ZipInterpreter oftype ArchiveInterpreter {
+            archiveType: "zip";
+      }
+
+      block Stops_FilePicker oftype FilePicker {
+            path: "./stops.txt";
+      }
+
+      block Stops_TextFileInterpreter oftype TextFileInterpreter { }
+
+
+      block Stops_CsvInterpreter oftype CSVInterpreter {
+            enclosing: '"';
+            delimiter: ',';
+      }
+
+      block Stops_DataRange oftype CellRangeSelector {
+            select: range A1:H*;
+      }
+
+      block Stops_ColumnDeleter oftype ColumnDeleter {
+            delete: [ column B, column D
+            ];
+      }
+
+      block Stops_TableInterpreter oftype TableInterpreter {
+            header: true;
+            columns: [
+                  'stop_id' oftype integer,
+                  'stop_name' oftype Umlauts_Text,
+                  'stop_lat' oftype GeoType,
+                  'stop_lon' oftype GeoType,
+                  'zone_id' oftype Filter_Zone
+            ];
+      }
+
+      block Stops_Loader oftype SQLiteLoader {
+            table: "stops";
+            file: "./gtfs.sqlite";
+      }
+
+
+
+
+
+      valuetype Filter_Zone oftype integer {
+            constraints: [
+                  filterdata
+            ];
+      }
+
+      valuetype GeoType oftype decimal {
+            constraints: [
+                  geocoordinate
+            ];
+      }
+
+      valuetype Umlauts_Text oftype text {
+            constraints: [
+                  umlauts
+            ];
+      }
+
+
+
+
+
+      constraint filterdata on integer: value>=1925 and value<=1925;
+      constraint geocoordinate oftype RangeConstraint {
+            lowerBound: -90;
+            lowerBoundInclusive: true;
+            upperBound: 90;
+            upperBoundInclusive: true;
+      }
+
+      constraint umlauts oftype RegexConstraint {
+            regex: /[äöüÄÖÜß]/;
+      }
+}
