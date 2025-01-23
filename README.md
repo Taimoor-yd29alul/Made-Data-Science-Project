@@ -1,10 +1,10 @@
-#The Impact of Hurricanes on U.S. Housing Markets
+# The Impact of Hurricanes on U.S. Housing Markets
 
 ## Description
 
-"The Impact of Hurricanes on U.S. Housing Markets" is a comprehensive data science initiative aimed at analyzing and understanding the effects of various factors on real-world phenomena. The project employs a range of data science techniques, including data cleaning, exploratory data analysis (EDA), modelling, and visualization to draw meaningful conclusions from complex datasets.
+"The Impact of Hurricanes on U.S. Housing Markets" is a comprehensive data science initiative aimed at analyzing and understanding the effects of various factors on real-world phenomena. The project employs various data science techniques, including data cleaning, exploratory data analysis (EDA), modelling, and visualization to draw meaningful conclusions from complex datasets.
 
-This project the relationship between natural disasters, specifically hurricanes, and their effects on the housing. The goal is to how hurricanes influence housing market dynamics in U.S. cities by analyzing metrics such as median sales, housing inventory levels, and recovery patterns over time. By merging data on hurricanes with housing market statistics the project seeks to trends, draw actionable insights, and contribute valuable to fields of real estate economics disaster response planning.
+This project examines the relationship between natural disasters, specifically hurricanes, and their effects on housing. The goal is to determine how hurricanes influence housing market dynamics in U.S. cities by analyzing metrics such as median sales, housing inventory levels, and recovery patterns over time. By merging data on hurricanes with housing market statistics the project seeks to trends, draw actionable insights, and contribute valuable to fields of real estate economics disaster response planning.
 
 The project is structured to be both a practical application of data science methods and a learning experience, involving tasks such as building ETL pipelines, performing data analysis, generating visualizations, and concisely presenting findings. The datasets used in this project are publicly available from Kaggle, ensuring transparency and the opportunity for others to replicate and build on the work done.
 
