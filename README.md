@@ -1,37 +1,26 @@
-# Methods of Advanced Data Engineering Template Project
+#The Impact of Hurricanes on U.S. Housing Markets
 
-This template project provides some structure for your open data project in the MADE module at FAU.
-This repository contains (a) a data science project that is developed by the student over the course of the semester, and (b) the exercises that are submitted over the course of the semester.
+## Description
 
-To get started, please follow these steps:
-1. Create your own fork of this repository. Feel free to rename the repository right after creation, before you let the teaching instructors know your repository URL. **Do not rename the repository during the semester**.
+"The Impact of Hurricanes on U.S. Housing Markets" is a comprehensive data science initiative aimed at analyzing and understanding the effects of various factors on real-world phenomena. The project employs a range of data science techniques, including data cleaning, exploratory data analysis (EDA), modelling, and visualization to draw meaningful conclusions from complex datasets.
 
-## Project Work
-Your data engineering project will run alongside lectures during the semester. We will ask you to regularly submit project work as milestones, so you can reasonably pace your work. All project work submissions **must** be placed in the `project` folder.
+This project the relationship between natural disasters, specifically hurricanes, and their effects on the housing. The goal is to how hurricanes influence housing market dynamics in U.S. cities by analyzing metrics such as median sales, housing inventory levels, and recovery patterns over time. By merging data on hurricanes with housing market statistics the project seeks to trends, draw actionable insights, and contribute valuable to fields of real estate economics disaster response planning.
 
-### Exporting a Jupyter Notebook
-Jupyter Notebooks can be exported using `nbconvert` (`pip install nbconvert`). For example, to export the example notebook to HTML: `jupyter nbconvert --to html examples/final-report-example.ipynb --embed-images --output final-report.html`
+The project is structured to be both a practical application of data science methods and a learning experience, involving tasks such as building ETL pipelines, performing data analysis, generating visualizations, and concisely presenting findings. The datasets used in this project are publicly available from Kaggle, ensuring transparency and the opportunity for others to replicate and build on the work done.
 
 
-## Exercises
-During the semester you will need to complete exercises using [Jayvee](https://github.com/jvalue/jayvee). You **must** place your submission in the `exercises` folder in your repository and name them according to their number from one to five: `exercise<number from 1-5>.jv`.
 
-In regular intervals, exercises will be given as homework to complete during the semester. Details and deadlines will be discussed in the lecture, also see the [course schedule](https://made.uni1.de/).
+## Key Features
 
-### Exercise Feedback
-We provide automated exercise feedback using a GitHub action (that is defined in `.github/workflows/exercise-feedback.yml`). 
+- Data extraction, transformation, and loading (ETL) pipeline
+- Comprehensive data analysis and exploration
+- Visualizations to support data-driven insights
+- Real-world data science problem-solving
 
-To view your exercise feedback, navigate to Actions → Exercise Feedback in your repository.
+## Project Details
 
-The exercise feedback is executed whenever you make a change in files in the `exercise` folder and push your local changes to the repository on GitHub. To see the feedback, open the latest GitHub Action run, open the `exercise-feedback` job and `Exercise Feedback` step. You should see command line output that contains output like this:
+This repository contains well-structured code and relevant resources, making it easy for anyone to understand and contribute. The aim is to provide valuable contributions to the data science field through detailed analysis and impactful findings.
 
-```sh
-Found exercises/exercise1.jv, executing model...
-Found output file airports.sqlite, grading...
-Grading Exercise 1
-	Overall points 17 of 17
-	---
-	By category:
-		Shape: 4 of 4
-		Types: 13 of 13
-```
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
